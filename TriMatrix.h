@@ -82,7 +82,9 @@ public:
     //Operator Overload: Matrix-Vector Solve Operation
     vector<double> operator/ (vector<double> B){
         double s=B.size();
-        vector<double>
+        vector<double> M=(*diagm);
+        vector<double> U=(*diagu);
+        vector<double> L=(*diagl);
         
         //Forward Elimination
         for (int i=1;i<s;i++){
